@@ -21,7 +21,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitModule {
 
     private const val REQUEST_TIME_OUT: Long = 5
-
     private const val HEADER_ACCEPT = "Accept"
     private const val HEADER_CONTENT_TYPE = "Content-Type"
     private const val HEADER_ACCEPT_VALUE = "application/json"

@@ -1,27 +1,21 @@
 package com.fady.instgramclone.presentation.viewmodels
 
-import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.fady.instgramclone.data.models.AlbumsResponse
 import com.fady.instgramclone.data.models.Photo
-import com.fady.instgramclone.data.models.PhotosResponse
 import com.fady.instgramclone.data.models.User
 import com.fady.instgramclone.domain.usecases.GetAlbumsUseCase
 import com.fady.instgramclone.domain.usecases.GetPhotosUseCase
 import com.fady.instgramclone.domain.usecases.GetUserDetailsUseCase
-import com.fady.instgramclone.domain.usecases.GetUsersUseCase
 import com.fady.instgramclone.presentation.utils.base.BaseViewModel
 import com.fady.instgramclone.presentation.utils.common.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel

@@ -31,7 +31,7 @@ import androidx.recyclerview.widget.ListAdapter
 abstract class DataBoundListAdapter<T, V : ViewDataBinding>(
     diffCallback: DiffUtil.ItemCallback<T>
 ) : ListAdapter<T, DataBoundViewHolder<V>>(
-    AsyncDifferConfig.Builder<T>(diffCallback)
+    AsyncDifferConfig.Builder(diffCallback)
         .build()
 ) {
 

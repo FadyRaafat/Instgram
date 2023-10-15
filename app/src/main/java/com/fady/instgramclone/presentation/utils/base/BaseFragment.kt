@@ -17,7 +17,7 @@ abstract class BaseFragment<V : ViewDataBinding, VM : BaseViewModel?> : Fragment
 
     lateinit var binding: V
 
-    lateinit var appExecutors: AppExecutors
+    private lateinit var appExecutors: AppExecutors
     protected abstract val viewModel: VM
     private var progressDialog: Dialog? = null
 

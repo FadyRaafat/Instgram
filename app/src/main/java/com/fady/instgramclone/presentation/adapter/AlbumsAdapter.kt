@@ -8,7 +8,6 @@ import com.fady.instgramclone.R
 import com.fady.instgramclone.data.models.Album
 import com.fady.instgramclone.databinding.ItemTitleBinding
 import com.fady.instgramclone.presentation.utils.base.DataBoundListAdapter
-import com.fady.instgramclone.presentation.utils.common.BindingAdapter
 
 class AlbumsAdapter(
     private val onAlbumClicked: (Album) -> Unit

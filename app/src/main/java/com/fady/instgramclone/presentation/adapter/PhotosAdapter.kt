@@ -8,7 +8,6 @@ import com.fady.instgramclone.R
 import com.fady.instgramclone.data.models.Photo
 import com.fady.instgramclone.databinding.ItemThumbnailBinding
 import com.fady.instgramclone.presentation.utils.base.DataBoundListAdapter
-import com.fady.instgramclone.presentation.utils.common.BindingAdapter
 
 class PhotosAdapter(
     private val onPhotoClicked: (Photo) -> Unit
@@ -38,6 +37,7 @@ class PhotosAdapter(
         binding: ItemThumbnailBinding, item: Photo, position: Int, adapterPosition: Int
     ) {
         binding.thumbnail = item.thumbnailUrl
+        binding.root.setOnClickListener { onPhotoClicked.invoke(item) }
     }
 
 }

@@ -1,7 +1,6 @@
 package com.fady.instgramclone.domain.usecases
 
 import com.fady.instgramclone.data.models.AlbumsResponse
-import com.fady.instgramclone.data.models.PhotosResponse
 import com.fady.instgramclone.domain.repository.PhotosRepository
 import com.fady.instgramclone.presentation.utils.common.Resource
 import kotlinx.coroutines.Dispatchers

@@ -5,7 +5,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.navGraphViewModels
 import com.fady.instgramclone.R
 import com.fady.instgramclone.data.models.Photo
-import com.fady.instgramclone.data.models.PhotosResponse
 import com.fady.instgramclone.databinding.FragmentGalleryBinding
 import com.fady.instgramclone.presentation.adapter.PhotosAdapter
 import com.fady.instgramclone.presentation.utils.base.BaseFragment

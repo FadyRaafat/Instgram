@@ -4,21 +4,21 @@ import android.content.SharedPreferences
 import com.google.gson.reflect.TypeToken
 
 internal inline fun <reified T> SharedPreferences?.processStoredObject(
-    key: String,
-    default: String = ""
+    key: String, default: String = ""
 ): T {
     val objectString = getSafeString(key, default)
     val typeToken = object : TypeToken<T>() {}.type
     return AppLocalDataSource.gson.fromJson(objectString, typeToken)
 }
+
 internal inline fun <reified T> SharedPreferences?.storeObject(key: String, value: T) {
     if (this == null) return
     val objectInJson = AppLocalDataSource.gson.toJson(value as Any)
     edit().putString(key, objectInJson).apply()
 }
+
 internal inline fun <reified T> SharedPreferences?.processStoredBoolean(
-    key: String,
-    default: Boolean
+    key: String, default: Boolean
 ): T {
     val objectString = getString(key) ?: default.toString()
     val typeToken = object : TypeToken<T>() {}.type

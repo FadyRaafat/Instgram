@@ -8,7 +8,6 @@ import java.util.*
 
 object BindingAdapter {
 
-
     @JvmStatic
     @BindingAdapter("setNetworkImage")
     fun setNetworkImage(view: ImageView, image: String?) {

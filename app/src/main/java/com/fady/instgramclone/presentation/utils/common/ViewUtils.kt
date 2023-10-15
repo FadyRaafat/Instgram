@@ -113,13 +113,11 @@ fun View.showSnackBar(
     message: String, retryActionName: String? = null, action: (() -> Unit)? = null
 ) {
     val snackBar = Snackbar.make(this, message, Snackbar.LENGTH_LONG)
-
     action?.let {
         snackBar.setAction(retryActionName) {
             it()
         }
     }
-
     snackBar.show()
 }
 
@@ -128,52 +126,6 @@ fun Activity.setStatusBarColor(color: Int) {
 }
 
 fun Context.getColorCompat(color: Int) = ContextCompat.getColor(this, color)
-
-fun todayDate() = SimpleDateFormat(
-    "EEEE, dd MMM yyyy", Locale.getDefault()
-).format(Calendar.getInstance().time) ?: ""
-
-fun Context.getMyString(id: Int, vararg formatArgs: Any) = resources.getString(id, *formatArgs)
-
-fun String.getDateDescription(): String? {
-    return SimpleDateFormat(
-        "yyyy-MM-dd", Locale.getDefault()
-    ).parse(this)?.let {
-        SimpleDateFormat(
-            "EEEE", Locale.getDefault()
-        ).format(
-            it
-        )
-    }
-
-}
-
-
-fun Activity.hideKeyboard() {
-    // Only runs if there is a view that is currently focused
-    this.currentFocus?.let { view ->
-        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
-        imm?.hideSoftInputFromWindow(view.windowToken, 0)
-    }
-}
-
-inline val Context.displayWidth: Int
-    get() = resources.displayMetrics.widthPixels
-
-inline val Context.displayHeight: Int
-    get() = resources.displayMetrics.heightPixels
-
-fun String.beatifyDate(): String? {
-    return SimpleDateFormat(
-        "yyyy-MM-dd HH:mm:ss.SSSSSS", Locale.getDefault()
-    ).parse(this)?.let {
-        SimpleDateFormat(
-            "EEEE, dd MMM yyyy", Locale.getDefault()
-        ).format(
-            it
-        )
-    }
-}
 
 fun Context.showToast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_LONG).show()
