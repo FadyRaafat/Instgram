@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Instgram</string>
+    <string name="title_home">Home</string>
+    <string name="user_info">User Info</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="company">Company</string>
+    <string name="no_internet">No internet connection please try again later</string>
+    <string name="some_error">Some error occurred, try again later</string>
+    <string name="retry">Retry</string>
+    <string name="connection_error">Connection Error</string>
+    <string name="albums">Albums</string>
+
+</resources>
